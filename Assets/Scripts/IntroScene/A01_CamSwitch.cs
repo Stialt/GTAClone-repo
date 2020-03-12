@@ -7,6 +7,7 @@ public class A01_CamSwitch : MonoBehaviour
     public GameObject firstCam;
     public GameObject secondCam;
     public GameObject credits_LeadDesigner;
+    public GameObject credits_Story;
 
     void Start()
     {
@@ -15,9 +16,10 @@ public class A01_CamSwitch : MonoBehaviour
     
     IEnumerator CamSwitcher()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         credits_LeadDesigner.SetActive(true);
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(5);
+        credits_Story.SetActive(true);
         secondCam.SetActive(true);
         firstCam.SetActive(false);
     }
