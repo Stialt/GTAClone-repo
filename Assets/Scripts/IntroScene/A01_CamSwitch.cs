@@ -6,6 +6,7 @@ public class A01_CamSwitch : MonoBehaviour
 {
     public GameObject firstCam;
     public GameObject secondCam;
+    public GameObject thirdCam;
     public GameObject credits_LeadDesigner;
     public GameObject credits_Story;
 
@@ -22,5 +23,9 @@ public class A01_CamSwitch : MonoBehaviour
         credits_Story.SetActive(true);
         secondCam.SetActive(true);
         firstCam.SetActive(false);
+
+        yield return new WaitForSeconds(4.5f);
+        secondCam.SetActive(false);
+        thirdCam.SetActive(true);
     }
 }
