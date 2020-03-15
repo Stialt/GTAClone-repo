@@ -23,7 +23,7 @@ public class A02_MoveChar : MonoBehaviour
 
     IEnumerator WalkSequence()
     {
-        //yield return new WaitForSeconds(0.4f);
+        //yield return new W aitForSeconds(0.4f);
         while(stepsTaken < 12)
         {
             yield return new WaitForSeconds(0.5f);
