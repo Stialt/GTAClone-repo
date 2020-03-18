@@ -24,6 +24,8 @@ public class A03_VoiceSubs : MonoBehaviour
 
     public GameObject fourthCamera;
 
+    public GameObject fadeOut;
+
     void Start()
     {
         StartCoroutine(IntroSubs());
@@ -32,7 +34,7 @@ public class A03_VoiceSubs : MonoBehaviour
     IEnumerator IntroSubs()
     {
         yield return new WaitForSeconds(8);
-        subText.GetComponent<Text>().text = "You asked for it, Vlei.";
+        subText.GetComponent<Text>().text = "You asked for it, George.";
         subText.SetActive(true);
         voiceLine01.Play();
 
@@ -40,7 +42,7 @@ public class A03_VoiceSubs : MonoBehaviour
         subText.GetComponent<Text>().text = "";
 
         yield return new WaitForSeconds(0.8f);
-        subText.GetComponent<Text>().text = "Denis, I swear it wasn't me.";
+        subText.GetComponent<Text>().text = "Lorenzo, I swear it wasn't me.";
         voiceLine02.Play();
 
         yield return new WaitForSeconds(2.1f);
@@ -54,7 +56,7 @@ public class A03_VoiceSubs : MonoBehaviour
         subText.GetComponent<Text>().text = "";
 
         yield return new WaitForSeconds(0.1f);
-        subText.GetComponent<Text>().text = "Denis! Please!";
+        subText.GetComponent<Text>().text = "Lorenzo! Please!";
         voiceLine04.Play();
 
         yield return new WaitForSeconds(0.7f);
@@ -81,6 +83,8 @@ public class A03_VoiceSubs : MonoBehaviour
         yield return new WaitForSeconds(5);
         subText.GetComponent<Text>().text = "Now it's time for me to return that favor.";
 
+        yield return new WaitForSeconds(2);
+        fadeOut.SetActive(true);
     }
     
 }
