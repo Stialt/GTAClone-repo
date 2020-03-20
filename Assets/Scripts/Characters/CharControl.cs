@@ -35,7 +35,10 @@ public class CharControl : MonoBehaviour
         }
         else
         {
-            thePlayer.GetComponent<Animation>().Play("Idle");
+            if (FiringPistol.isFiring == false)
+            {
+                thePlayer.GetComponent<Animation>().Play("Idle");
+            }
             isRunning = false;
         }
     }
