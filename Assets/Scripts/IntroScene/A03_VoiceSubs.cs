@@ -88,7 +88,7 @@ public class A03_VoiceSubs : MonoBehaviour
         fadeOut.SetActive(true);
 
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
     
 }
